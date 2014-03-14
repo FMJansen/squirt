@@ -16,8 +16,6 @@ This 30-second [video tutorial](https://www.youtube.com/watch?v=XZj25ujuOGk&feat
 
 3. Visit an [article](http://zenhabits.net/), click the bookmarklet, and read speedily.
 
-***Please note:** Simple usage statistics are monitored using [Keen](http://keen.io) to improve Squirt.*
-
 
 
 ---
