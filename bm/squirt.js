@@ -323,6 +323,22 @@ sq.host =  window.location.search.match('sq-dev') ?
       Keen.addEvent('close');
     });
 
+    on(document, 'keyup', function(e){
+      if(e.keyCode === 27) {
+        sq.closed = true;
+        dispatch('squirt.close');
+        Keen.addEvent('close');
+      } else if(e.keyCode === 32) {
+        dispatch('squirt.play.toggle');
+      } else if(e.keyCode === 37) {//left arrow
+        dispatch('squirt.rewind', {seconds: 10});
+      }
+    });
+
+    window.onkeydown = function(e) {
+      return !(e.keyCode == 32);//stop browser from scrolling down when space is pressed
+    };
+
     on(window, 'orientationchange', function(){
       Keen.addEvent('orientation-change', {'orientation': window.orientation});
     });
